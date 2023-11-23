@@ -8,7 +8,7 @@
         Title="UserForm" Height="450" Width="800">
     <Grid>
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="100"/>
+			<ColumnDefinition Width="150"/>
 			<ColumnDefinition/>
 			<ColumnDefinition/>
 		</Grid.ColumnDefinitions>
@@ -19,18 +19,19 @@
 			<RowDefinition/>
 		</Grid.RowDefinitions>
 
-		<Label Grid.Row="0" Grid.Column="0" Content="Name :" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-		<TextBox Name="inputName" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="left" Width="300"/>
+		<Label Grid.Row="0" Grid.Column="0" Content="Name :" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="40"/>
+		<TextBox Name="inputName" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="left" Width="300" Height="50" FontSize="36" VerticalContentAlignment="Center" PreviewTextInput="inputText_PreviewTextInput" />
 
-		<Label Grid.Row="1" Grid.Column="0" Content="Credit card: " VerticalAlignment="Center" HorizontalAlignment="Right"/>
-		<TextBox Name="inputCreditCard" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="left" Width="300"/>
+		<Label Grid.Row="1" Grid.Column="0" Content="Credit card: " VerticalAlignment="Center" HorizontalAlignment="Right"  FontSize="27"/>
+		<TextBox Name="inputCreditCard" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="left" Width="300" Height="30" FontSize="22" VerticalContentAlignment="Center" PreviewTextInput="inputNumber_PreviewTextInput" TextChanged="inputCreditCard_TextChanged" MaxLength="19"/>
 
-		<Label Grid.Row="2" Grid.Column="0" Content="CVV: " VerticalAlignment="Center" HorizontalAlignment="Right"/>
-		<TextBox Name="inputCVV" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="left" Width="300"/>
+		<Label Grid.Row="2" Grid.Column="0" Content="CVV: " VerticalAlignment="Center" HorizontalAlignment="Right"  FontSize="40"/>
+		<TextBox Name="inputCVV" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="left" Width="300" Height="90" FontSize="78" VerticalContentAlignment="Center" PreviewTextInput="inputNumber_PreviewTextInput" MaxLength="3"/>
 
-		<Label Grid.Row="3" Grid.Column="0" Content="Balance: " VerticalAlignment="Center" HorizontalAlignment="Right"/>
-		<TextBox Name="inputBalance" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="left" Width="300"/>
+		<Label Grid.Row="3" Grid.Column="0" Content="Balance: " VerticalAlignment="Center" HorizontalAlignment="Right"  FontSize="38"/>
+		<TextBox Name="inputBalance" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="left" Width="300" Height="30" FontSize="22" VerticalContentAlignment="Center" PreviewTextInput="inputNumber_PreviewTextInput" MaxLength="9"/>
 
-		<Button Grid.Row="1" Grid.RowSpan="2" Grid.Column="2" Content="Add" VerticalAlignment="Center" HorizontalContentAlignment="Center" Width="300" Height="350" FontSize="80"/>
+		<Button Name="btnAdd" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2" Content="Add" VerticalAlignment="Center" HorizontalContentAlignment="Center" Width="300" Height="200" FontSize="80" VerticalContentAlignment="Center" Click="Add_Click"/>
+		<Button Name="btnUpdate" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2" Content="Update" VerticalAlignment="Center" HorizontalContentAlignment="Center" Width="300" Height="200" FontSize="80" VerticalContentAlignment="Center" Visibility="Collapsed" Click="btnUpdate_Click"/>
 	</Grid>
 </Window>

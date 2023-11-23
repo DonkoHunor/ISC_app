@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ISC_app
 {
-    class User
+    public class User
     {
         [JsonProperty("id")]
         public int Id { get; set; }

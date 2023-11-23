@@ -15,12 +15,14 @@
 			<ColumnDefinition/>
 			<ColumnDefinition/>
 			<ColumnDefinition/>
+			<ColumnDefinition/>
 		</Grid.ColumnDefinitions>
 
 		<Button Content="Add" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Click="Add_Click"/>
-		<Button Content="Update" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30"/>
-		<Button Content="Delete" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30"/>
+		<Button Content="Update" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Click="Update_Click"/>
+		<Button Content="Delete" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Click="Delete_Click"/>
+		<Button Content="-5000" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Click="Button_Click"/>
 
-		<DataGrid Name="data" Grid.Row="1" Grid.ColumnSpan="3" d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True"/>
+		<DataGrid Name="data" Grid.Row="1" Grid.ColumnSpan="4" d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True"/>
 	</Grid>
 </Window>
